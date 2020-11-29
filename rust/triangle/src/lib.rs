@@ -6,7 +6,7 @@ pub struct Triangle<T> {
 
 impl<T> Triangle<T>
 where
-    T: Copy + Clone + PartialOrd + Num,
+    T: Copy + PartialOrd + Num,
 {
     pub fn build(sides: [T; 3]) -> Option<Triangle<T>> {
         let mut sides = sides.to_vec();
