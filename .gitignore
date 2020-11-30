@@ -1,1 +1,7 @@
 */*/.exercism
+
+# Rust
+rust/*/target/
+rust/*/**/*.rs.bk
+rust/*/Cargo.lock
+rust/*/.gitignore
