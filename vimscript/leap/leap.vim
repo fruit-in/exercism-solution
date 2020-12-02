@@ -3,5 +3,5 @@
 " and 0 otherwise.
 "
 function! LeapYear(year) abort
-  return a:year % 4 == 0 && a:year % 100 != 0 || a:year % 400 == 0
+  return !(a:year % 4) && a:year % 100 || !(a:year % 400)
 endfunction
