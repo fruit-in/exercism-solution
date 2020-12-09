@@ -1,5 +1,5 @@
 # Exercism Solutions
-* [Haskell(unfinished)](https://github.com/fruit-in/exercism-solution/tree/hs)
-* [Python(unfinished)](https://github.com/fruit-in/exercism-solution/tree/py)
-* [Rust(unfinished)](https://github.com/fruit-in/exercism-solution/tree/rs)
-* [Vim script](vimscript/README.md)
+- [ ] [Haskell](https://github.com/fruit-in/exercism-solution/tree/hs/haskell)
+- [ ] [Python](https://github.com/fruit-in/exercism-solution/tree/py/python)
+- [ ] [Rust](https://github.com/fruit-in/exercism-solution/tree/rs/rust)
+- [x] [Vim script](vimscript/README.md#exercism-vim-script-solutions)
