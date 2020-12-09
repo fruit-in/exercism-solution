@@ -20,7 +20,7 @@ endfunction
 function! Equilateral(triangle) abort
   let triangle = sort(a:triangle)
 
-  return Triangle(triangle) && triangle[0] == triangle[1] && triangle[1] == triangle[2]
+  return Triangle(triangle) && triangle[0] == triangle[2]
 endfunction
 
 function! Isosceles(triangle) abort
