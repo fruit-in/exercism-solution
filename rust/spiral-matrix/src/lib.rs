@@ -1,4 +1,8 @@
 pub fn spiral_matrix(size: u32) -> Vec<Vec<u32>> {
+    if size == 0 {
+        return vec![];
+    }
+
     let size = size as usize;
     let mut num = 1;
     let mut mat = vec![vec![0; size]; size];
