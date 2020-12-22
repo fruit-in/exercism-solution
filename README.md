@@ -1,5 +1,4 @@
 # Exercism Solutions
-- [ ] Elixir
 - [x] [Elm](elm/README.md#exercism-elm-solutions)
 - [ ] [Haskell](https://github.com/fruit-in/exercism-solution/tree/hs/haskell)
 - [ ] [Pony](https://github.com/fruit-in/exercism-solution/tree/pony/pony)
