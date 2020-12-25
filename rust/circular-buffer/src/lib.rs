@@ -10,10 +10,7 @@ pub enum Error {
     FullBuffer,
 }
 
-impl<T> CircularBuffer<T>
-where
-    T: Clone,
-{
+impl<T> CircularBuffer<T> {
     pub fn new(capacity: usize) -> Self {
         Self {
             buffer: (0..capacity).map(|_| None).collect(),
@@ -53,10 +50,16 @@ where
     }
 
     pub fn overwrite(&mut self, element: T) {
-        if self.write(element.clone()).is_err() {
-            self.buffer[self.read_index].replace(element);
-            self.read_index = (self.read_index + 1) % self.buffer.len();
-            self.write_index = self.read_index;
+        match self.buffer[self.write_index] {
+            Some(_) => {
+                self.buffer[self.read_index].replace(element);
+                self.read_index = (self.read_index + 1) % self.buffer.len();
+                self.write_index = self.read_index;
+            }
+            None => {
+                self.buffer[self.write_index].replace(element);
+                self.write_index = (self.write_index + 1) % self.buffer.len();
+            }
         }
     }
 }
