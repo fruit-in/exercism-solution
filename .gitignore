@@ -2,3 +2,9 @@
 
 # Elm
 elm/*/elm-stuff
+
+# Rust
+rust/*/target/
+rust/*/**/*.rs.bk
+rust/*/Cargo.lock
+rust/*/.gitignore

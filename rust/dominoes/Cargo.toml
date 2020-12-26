@@ -1,0 +1,7 @@
+[package]
+edition = "2018"
+name = "dominoes"
+version = "2.1.0"
+
+[dependencies]
+permutator = "0.4.0"
