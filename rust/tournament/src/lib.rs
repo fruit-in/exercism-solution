@@ -11,16 +11,16 @@ pub fn tally(match_results: &str) -> String {
         hash.entry(result[1]).or_insert(vec![0; 4])[0] += 1;
         match result[2] {
             "win" => {
-                hash.entry(result[0]).or_insert(vec![0; 4])[1] += 1;
-                hash.entry(result[1]).or_insert(vec![0; 4])[3] += 1;
+                hash.get_mut(&result[0]).unwrap()[1] += 1;
+                hash.get_mut(&result[1]).unwrap()[3] += 1;
             }
             "loss" => {
-                hash.entry(result[0]).or_insert(vec![0; 4])[3] += 1;
-                hash.entry(result[1]).or_insert(vec![0; 4])[1] += 1;
+                hash.get_mut(&result[0]).unwrap()[3] += 1;
+                hash.get_mut(&result[1]).unwrap()[1] += 1;
             }
             _ => {
-                hash.entry(result[0]).or_insert(vec![0; 4])[2] += 1;
-                hash.entry(result[1]).or_insert(vec![0; 4])[2] += 1;
+                hash.get_mut(&result[0]).unwrap()[2] += 1;
+                hash.get_mut(&result[1]).unwrap()[2] += 1;
             }
         }
     }
