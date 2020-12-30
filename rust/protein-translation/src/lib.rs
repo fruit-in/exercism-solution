@@ -1,4 +1,5 @@
 use std::collections::HashMap;
+use std::str;
 
 pub struct CodonsInfo<'a>(HashMap<&'a str, &'a str>);
 
@@ -9,11 +10,10 @@ impl<'a> CodonsInfo<'a> {
 
     pub fn of_rna(&self, rna: &str) -> Option<Vec<&'a str>> {
         let proteins = rna
-            .chars()
-            .collect::<Vec<_>>()
+            .as_bytes()
             .chunks(3)
             .map(|codon| {
-                self.name_for(&codon.iter().collect::<String>())
+                self.name_for(str::from_utf8(codon).unwrap())
                     .unwrap_or("invalid")
             })
             .take_while(|&p| p != "stop codon")
