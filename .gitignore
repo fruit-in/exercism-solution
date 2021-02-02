@@ -1,1 +1,6 @@
 */*/.exercism
+
+# Haskell
+haskell/*/.stack-work/
+haskell/*/*.cabal
+haskell/*/stack.yaml.lock
