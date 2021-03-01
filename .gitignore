@@ -3,6 +3,10 @@
 # Elm
 elm/*/elm-stuff
 
+# Python
+python/*/__pycache__
+python/*/.pytest_cache
+
 # Rust
 rust/*/target/
 rust/*/**/*.rs.bk
