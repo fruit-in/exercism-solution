@@ -3,6 +3,11 @@
 # Elm
 elm/*/elm-stuff
 
+# Haskell
+haskell/*/.stack-work/
+haskell/*/*.cabal
+haskell/*/stack.yaml.lock
+
 # Python
 python/*/__pycache__
 python/*/.pytest_cache
